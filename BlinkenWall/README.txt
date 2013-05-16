@@ -11,6 +11,9 @@ http://playground.arduino.cc/learning/TLC5940
 newer version might require other and/or additional
 header-files to be included.
 
+After installing Tlc5940 make sure to edit tlc_config.h
+
+set NUM_TLC to 18 and TLC_CHANNEL_TYPE to uint16_t
 
 For more information on how to create a animation
 please read the comments in BlinkenWall.h
