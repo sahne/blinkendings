@@ -84,6 +84,8 @@ public:
 	void clear();
 	uint32_t *createColor(uint32_t pattern, int lenx, int leny);
 	void drawPoint(int x, int y, int z, uint32_t color);
+	void drawLine(int8_t xs, int8_t ys, int8_t xe, int8_t ye, int8_t z, uint32_t color);
+	void drawRect(int8_t xs, int8_t ys, int8_t xe, int8_t ye, int8_t z, uint32_t color, uint32_t fillcolor);
 	void setBackGround(uint32_t color);
 private:
 	void draw_raw(int pos, uint32_t color);
@@ -93,6 +95,8 @@ private:
 	int delay;
 	uint32_t background;
 	unsigned char zbuffer[8][12];
+	uint32_t fb[8][12];
+	uint32_t fbprev[8][12];
 };
 
 #endif /* __BLINKENWALL_H */

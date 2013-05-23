@@ -18,37 +18,4 @@ set NUM_TLCS to 18 and TLC_CHANNEL_TYPE to uint16_t
 For more information on how to create a animation
 please read the comments in BlinkenWall.h
 
-example programm
-
-this will constantly draw the ITS logo to the wall
-
-8<--------8<------8<------
-
-#include "tlc_config.h"
-#include "Tlc5940.h"
-#include "BlinkenWall.h"
-#include "Animations.h"
-
-/* delay 150 ms, black default background */
-BlinkenWall blinkenWall(150, 0);
-
-void
-setup()
-{
-    blinkenWall.setup()
-}
-
-void
-loop()
-{
-    int frame = 0;
-    while(1) {
-        blinkenWall.drawAnimation(&itssyndikat, 0, 0, 0, frame++);
-        if (frame > 2)
-            frame = 0;
-        blinkenWall.update();
-        blinkenWall.clear();
-    }
-}
-
------->8-------->8------>8
+see examples/ for more inforamtion and exmaples.
